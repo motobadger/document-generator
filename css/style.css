@@ -923,4 +923,11 @@ body {
     margin: 20px;
     padding: 20px; }
 
+.form-group {
+  display: block;
+  margin-bottom: 50px; }
+
+textarea {
+  width: 100%; }
+
 /*# sourceMappingURL=style.css.map */

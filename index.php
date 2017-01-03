@@ -30,14 +30,21 @@
         <div class="content-area">
             <div class="content-container">
                 <form>
-                    <label for="recipientAddress">Recipient Address</label><br/>
-                    <textarea id="recipientAddress" type="text" ng-model="recipientAddress">
+                    <div class="form-group">
+                        <label for="recipientAddress">Recipient Address</label><br/>
+                        <select ng-model="recipientAddress" ng-init="recipientAddress = recipientAddresses[0].content" ng-options="recipientAddress.content as recipientAddress.id for recipientAddress in recipientAddresses">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="senderAddress">Recipient Address</label><br/>
+                        <select ng-model="senderAddress" ng-init="senderAddress = senderAddresses[0].content" ng-options="senderAddress.content as senderAddress.id for senderAddress in senderAddresses">>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label><br/>
+                    <textarea id="message" rows="10" type="text" ng-model="message">
                     </textarea>
-
-                    <label for="message">Message</label><br/>
-                    <textarea id="message" type="text" ng-model="message">
-                    </textarea>
-
+                    </div>
                 </form>
             </div>
         </div>
@@ -47,7 +54,7 @@
 </footer>
 <script src="//cdn.ckeditor.com/4.6.1/basic/ckeditor.js"></script>
 <script>
-    CKEDITOR.replace( 'message' );
+    //CKEDITOR.replace('message');
 </script>
 </body>
 </html>
