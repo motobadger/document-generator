@@ -1,0 +1,47 @@
+@import "imports";
+
+*{
+  box-sizing: border-box;
+}
+.wrapper{
+  @include make-row();
+}
+body{
+  background-color: #727272;
+}
+
+.document-area{
+  @include make-lg-column(8);
+  height: 100vh;
+  .document-container{
+    width: 21cm;
+    height: 29.7cm;
+    margin:20px auto;
+    padding:75px;
+    background-color: #ffffff;
+    @include clearfix();
+    .left-header{
+      @include make-xs-column(6);
+    }
+    .right-header{
+      @include make-xs-column(6);
+      text-align: right;
+    }
+    .document-body{
+      @include make-xs-column(12);
+      padding-top: 20px;
+    }
+  }
+}
+
+.content-area{
+  @include make-lg-column(4);
+  background-color: #ffffff;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  .content-container{
+    margin:20px;
+    padding:20px;
+  }
+}

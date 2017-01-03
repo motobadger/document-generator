@@ -1,0 +1,17 @@
+{
+  "name": "document-generator",
+  "version": "1.0.0",
+  "description": "Document generator using angular js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dan Elliott",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.0"
+  }
+}
