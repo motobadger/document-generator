@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp" ng-controller="myCtrl">
+<html lang="en" ng-app="myApp" ng-controller="myCtrl" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Angular Document Generator</title>
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/lib/angular/angular.min.js"></script>
-    <script src="js/lib/angular/angular-route.min.js"></script>
-    <script src="js/lib/angular/angular-animate.min.js"></script>
     <script src="js/lib/angular/sanitize.js"></script>
     <script src="js/app.js"></script>
 </head>
@@ -55,6 +53,7 @@
 <script src="//cdn.ckeditor.com/4.6.1/basic/ckeditor.js"></script>
 <script>
     //CKEDITOR.replace('message');
+    //TODO - Add directive to take care of populating message from CKEditor
 </script>
 </body>
 </html>
