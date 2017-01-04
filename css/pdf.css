@@ -1,0 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+.left-header,.right-header {
+    width: 20%;
+    float: left;
+}

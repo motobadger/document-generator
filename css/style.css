@@ -871,40 +871,44 @@ body {
     .document-area {
       float: left;
       width: 66.66667%; } }
-  .document-area .document-container {
-    width: 21cm;
-    height: 29.7cm;
-    margin: 20px auto;
-    padding: 75px;
-    background-color: #ffffff; }
-    .document-area .document-container:before, .document-area .document-container:after {
-      content: " ";
-      display: table; }
-    .document-area .document-container:after {
-      clear: both; }
-    .document-area .document-container .left-header {
-      position: relative;
-      float: left;
-      width: 50%;
-      min-height: 1px;
-      padding-left: 10px;
-      padding-right: 10px; }
-    .document-area .document-container .right-header {
-      position: relative;
-      float: left;
-      width: 50%;
-      min-height: 1px;
-      padding-left: 10px;
-      padding-right: 10px;
-      text-align: right; }
-    .document-area .document-container .document-body {
-      position: relative;
-      float: left;
-      width: 100%;
-      min-height: 1px;
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 20px; }
+
+.document-container {
+  width: 21cm;
+  height: 29.7cm;
+  margin: 20px auto;
+  padding: 75px;
+  background-color: #ffffff; }
+  .document-container:before, .document-container:after {
+    content: " ";
+    display: table; }
+  .document-container:after {
+    clear: both; }
+
+.left-header {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.right-header {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right; }
+
+.document-body {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px; }
 
 .content-area {
   position: relative;

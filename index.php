@@ -44,16 +44,44 @@
                     </textarea>
                     </div>
                 </form>
+
+                <form  id="download" action="download.php" method="post">
+
+                    <div style="display:none;" >
+                        <input type="text" name="fileContents" id="fileContents" value=''/>
+                        <input type="text" name="fileName" id="fileName" value='mySitePage.pdf'/>
+                        <input type="text" name="css" value='/css/pdf.css'/>
+
+                    </div>
+                    <input type="submit" id="createPdf" value="Download PDF" hidden="hidden"/>
+                </form>
+                <button id="save">Download</button>
             </div>
         </div>
     </div>
 </div>
-<footer>
-</footer>
 <script src="//cdn.ckeditor.com/4.6.1/basic/ckeditor.js"></script>
 <script>
     //CKEDITOR.replace('message');
     //TODO - Add directive to take care of populating message from CKEditor
+
+    /*$(function(){
+        var pdfContent = $('.document-container')[0].innerHTML;
+        $('#fileContents').val(pdfContent);
+        $('#pdfForm').append('<input type="submit"  value="Download PDF" />');
+    });*/
+    $('#save').click(function() {
+
+        event.preventDefault();
+
+        var doc_clone = $('.document-container').clone();
+        var doc = doc_clone.prop('outerHTML');
+
+        $('#fileContents').val(doc);
+
+        $('#createPdf').click();
+
+    });
 </script>
 </body>
 </html>
