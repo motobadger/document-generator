@@ -1,4 +1,4 @@
-@import "imports";
+@import "_imports";
 
 *{
   box-sizing: border-box;
@@ -48,7 +48,11 @@ body{
 
 .form-group{
   display: block;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
+  input,textarea,select{
+    display: block;
+    margin-bottom: 5px;
+  }
 }
 textarea{
   width: 100%;

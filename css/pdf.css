@@ -1,7 +1,19 @@
 *{
     box-sizing: border-box;
 }
+
+.document-container {
+    padding: 75px;
+}
+
 .left-header,.right-header {
-    width: 20%;
+    width: 50%;
     float: left;
+}
+.right-header{
+    text-align: right;
+}
+.document-body{
+    padding-top: 20px;
+    width:100%;
 }

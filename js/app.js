@@ -1,16 +1,26 @@
 var app = angular.module('myApp', ['ngSanitize']);
-app.controller('myCtrl', function($scope) {
-    $scope.recipientAddresses = [
-        {id: 'Recipient Home', content: 'Mr Recipient<br/>Some Lane<br/>Test Town<br/>Imaginary County<br/>AA1 1AA'},
-        {id: 'Recipient Office', content: 'Mr Recipient 2<br/>Some Lane<br/>Test Town<br/>Imaginary County<br/>AA1 1AA'},
-        {id: 'Recipient Reception', content: 'Mr Recipient 3<br/>Some Lane<br/>Test Town<br/>Imaginary County<br/>AA1 1AA'}
-    ];
-    $scope.senderAddresses = [
-        {id: 'Sender Office', content: 'Mr Sender<br/>Some Lane<br/>Test Town<br/>Imaginary County<br/>AA1 1AA'},
-        {id: 'Sender Home', content: 'Mr Sender 2<br/>Some Lane<br/>Test Town<br/>Imaginary County<br/>AA1 1AA'},
-        {id: 'Sender Reception', content: 'Mr Sender 3<br/>Some Lane<br/>Test Town<br/>Imaginary County<br/>AA1 1AA'}
-    ];
+app.controller('myCtrl', function($scope, $http) {
+
+    $scope.recipientName = "Sir/Madam";
+
+    $http.get('js/data/recipientAddresses.json').success(function(data) {
+        $scope.recipientAddresses = data;
+    });
+    $http.get('js/data/senderAddresses.json').success(function(data) {
+        $scope.senderAddresses = data;
+    });
+    $http.get('js/data/users.json').success(function(data) {
+        $scope.users = data;
+    });
+
     $scope.message = "Message content goes here ";
+    $scope.clientReference = 111;
+
+    $scope.text1 = "Text 1";
+    $scope.text2 = "Text 2";
+    $scope.text3 = "Text 3";
+    $scope.senderName = "Dan Elliott Industries";
+
 });
 
 
